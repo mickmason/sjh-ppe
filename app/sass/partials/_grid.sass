@@ -1,12 +1,27 @@
+@import 'project-globals'
+$tablet: $med
 .container
-	padding: 1rem
+	
 
-.layout4x2
-	display: none
-	grid-template-rows: auto auto 
-	grid-template-columns: repeat(4, 1fr)
 .flexbox
 	display: flex 
 	justify-content: flex-start  
-.feature-section
-	color: #f0f0f0
+[class*="column"]
+	padding-left: 	$gutter/2
+	padding-right: 	$gutter/2
+
+@media screen and (min-width: $tablet)
+	[class*="layout"] 
+		display: grid
+		grid-template-rows: auto 
+	.layout-1col
+		grid-template-columns: repeat(1, 1fr)
+	.layout-2col, .layout-3col, .layout-4col
+		grid-template-columns: repeat(2, 1fr)
+@media screen and (min-width: $large)
+	.layout-2col
+		grid-template-columns: repeat(2, 1fr)
+	.layout-3col
+		grid-template-columns: repeat(3, 1fr)
+	.layout-4col
+		grid-template-columns: repeat(4, 1fr)

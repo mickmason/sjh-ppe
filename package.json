@@ -43,7 +43,9 @@
       ],
       "extensions": "svg"
     },
-    "js:dev": [ "app/scripts/" ],
+    "js:dev": [
+      "app/scripts/"
+    ],
     "lintcss": {
       "patterns": [
         "app"
@@ -59,7 +61,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run sass & npm run watch:html & npm run watch:media & npm run watch:svg & npm run watch:svgimgs & npm run watch:js & npm run watch:css & npm run server",
+    "start": "npm run sass & npm run watch:html & npm run watch:media & npm run watch:svg & npm run watch:js & npm run watch:css & npm run server",
     "build": "npm run copy:html && npm run sass:build && npm run copy:css && npm run babeljs && npm run uglifyjs && npm run concatjs && npm run postcss && npm run criticalcss ",
     "stop": "stop http-server",
     "sass": "node-sass --sourceMap=true -w ./app/sass/ -o ./app/css/",
@@ -74,8 +76,8 @@
     "watch:svgimgs": "npm-watch svgstore:imgs",
     "svgstore": "node ./bc_modules/svgstore.js",
     "svgstore:imgs": "node ./bc_modules/svgstore.js --images",
-    "js:dev": "npm run js:lint && npm run concatjs", 	
-		"js:lint": "./node_modules/.bin/eslint ./app/scripts/",
+    "js:dev": "npm run js:lint && npm run concatjs",
+    "js:lint": "./node_modules/.bin/eslint ./app/scripts/",
     "babeljs": "./node_modules/.bin/babel ./dist/scripts/app.js -o ./dist/scripts/app.js",
     "uglifyjs": "uglifyjs ./dist/scripts/app.js -o ./dist/scripts/app.js",
     "lintcss": "csslint ./app/css/style.css && copy:css",
@@ -103,7 +105,7 @@
     "cssnano": "^4.1.10",
     "eslint": "^6.6.0",
     "live-server": "^1.2.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "npm-watch": "^0.6.0",
     "postcss": "^7.0.23",
     "postcss-cli": "^6.1.3",
