@@ -56,27 +56,44 @@ button
 	justify-content: center
 @import 'partials/grid';
 @import 'partials/hero';
+.container:not(.items-count)
+	padding: $vertical-unit*3 0
 .container-content
 	max-width: $content-max-width
 	margin-left: calc((100% - #{$content-max-width})/2)
 .hero 
+	height: auto
 	justify-content: center
-	h1 
-		margin-top: 0 
-		margin-bottom: 0
-		font-size: $text-12
-	p 
-		font-size: $text-10
-		font-weight: 200
-		margin-top: 0
+	padding: $vertical-unit*3 0
+	
+	&__body
+		&__sjh-logo
+			margin-bottom: $vertical-unit * 0.5
+	&__body
+		&__drs
+			font-weight: 200
+	&__body
+		&__title, &__sub-title
+			margin-top: 0 
+			margin-bottom: 0
+	&__body
+		&__title
+			font-size: $text-12
+	&__body
+		&__sub-title
+			font-weight: 200
+			font-size: $text-04
 	&__body
 		align-items: flex-start
 		img
 			flex: 1 1 auto
 			width: auto
 			min-width: 0
-
-	
+@media screen and (max-width: #{($med - 	1)})
+	.hero
+		min-height: 100vh
+		&__body
+			margin-bottom: $vertical-unit
 		
 .items-count
 	background-color: $brand-secondary
