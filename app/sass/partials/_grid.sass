@@ -1,19 +1,22 @@
 @import 'project-globals'
 $tablet: $med
 .container
-	
-
+	&-content
+		
 .flexbox
 	display: flex 
 	justify-content: flex-start  
 [class*="column"]
 	padding-left: 	$gutter/2
 	padding-right: 	$gutter/2
+	margin-bottom: $vertical-unit
+	
 
 @media screen and (min-width: $tablet)
 	[class*="layout"] 
 		display: grid
 		grid-template-rows: auto 
+		
 	.layout-1col
 		grid-template-columns: repeat(1, 1fr)
 	.layout-2col, .layout-3col, .layout-4col

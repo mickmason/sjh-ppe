@@ -12,12 +12,17 @@ body
 h1, h2, h3, h4, h5
 	font-family: $heading-font-family, sans-serif 
 	line-height: 1.35
+	margin-top: 0
+	margin-bottom: $vertical-unit
 h1
 	font-size: 2.0581rem
 h2
 	font-size: 1.618rem
 h3
 	font-size: 1.272rem 
+p, ul
+	margin-top: 		0
+	margin-bottom: $vertical-unit
 button
 	font-family: $text-sans
 .svg-icon
@@ -27,8 +32,31 @@ button
 	background-color: $shade-01
 
 .is-very-big-text
-	font-size: 8rem
-	font-family: $heading-font-family
+	font-size: 6rem
+	font-weight: 300
+	line-height: 1
+	
+.feature-heading
+	margin-top: 0
+
+.btn
+	margin-top: $vertical-unit
+	padding: calc(#{$vertical-unit/2} - 2px) 1.5rem calc(#{$vertical-unit/2} + 2px) 1.5rem
+	line-height: 1
+	border-radius: 2rem
+	color: $black
+	background-color: $brand-secondary
+	text-decoration: none
+	transition: background-color 300ms ease-out 
+	&:hover, &:active, &:focus
+		background-color: lighten($brand-secondary, 10%)
+		text-decoration: underline
+	& &__red
+		color: $white
+		background-color: $brand-red
+		&:hover, &:active, &:focus
+			background-color: darken($brand-red, 10%)
+
 @media screen and (min-width: 600px) 
 	html
 		font-size: 16px
@@ -43,9 +71,9 @@ button
 	iframe, embed, video
 		position: absolute
 		top: 50%
-		left: calc(50% - #{$gutter/2})
-		transform: translate(calc(-50% + #{$gutter/2}), -50%)
-		width: calc(100% - #{$gutter})
+		left: calc(50%)
+		transform: translate(calc(-50%), -50%)
+		width: calc(100%)
 		height: 100%
 		
 .embed-wrapper-16x9
@@ -54,18 +82,31 @@ button
 	display: flex
 	flex-direction: column
 	justify-content: center
+
 @import 'partials/grid';
 @import 'partials/hero';
-.container:not(.items-count)
+
+.container
 	padding: $vertical-unit*3 0
+
+		
 .container-content
-	max-width: $content-max-width
+	max-width: calc(#{$content-max-width} - (#{$gutter/2}))
 	margin-left: calc((100% - #{$content-max-width})/2)
+	
+		
+.items-count
+	.column
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
 .hero 
 	height: auto
 	justify-content: center
 	padding: $vertical-unit*3 0
-	
+	&-content
+		display: flex
+		justify-content: center
 	&__body
 		&__sjh-logo
 			margin-bottom: $vertical-unit * 0.5
@@ -89,12 +130,29 @@ button
 			flex: 1 1 auto
 			width: auto
 			min-width: 0
+	&__cta
+		font-size: $text-02
+		
 @media screen and (max-width: #{($med - 	1)})
 	.hero
 		min-height: 100vh
+		
 		&__body
 			margin-bottom: $vertical-unit
-		
+.am-cp-posts
+	margin-top: $vertical-unit*2
+	@media screen and (min-width: $tablet)
+		margin-top: 0
+	
+.am-cp-post
+	&__leader
+		max-width: #{(780/18)}rem
 .items-count
 	background-color: $brand-secondary
 	color: $black
+	@media screen and (min-width: $tablet)
+		.feature-heading
+			margin-bottom: 0
+
+footer
+	background-color: $brand-red
