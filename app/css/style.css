@@ -49,6 +49,9 @@ button {
 .feature-heading {
   margin-top: 0; }
 
+img {
+  width: 100%; }
+
 .btn {
   margin-top: 1.5rem;
   padding: calc(0.75rem - 2px) 1.5rem calc(0.75rem + 2px) 1.5rem;
@@ -79,6 +82,9 @@ button {
   html {
     font-size: 20px; } }
 
+iframe {
+  border: none; }
+
 [class*="embed-wrapper"] {
   position: relative; }
   [class*="embed-wrapper"] iframe, [class*="embed-wrapper"] embed, [class*="embed-wrapper"] video {
@@ -87,7 +93,12 @@ button {
     left: calc(50%);
     transform: translate(calc(-50%), -50%);
     width: calc(100%);
-    height: 100%; }
+    height: 100%;
+    border: none; }
+
+.an-post-map-embed iframe {
+  width: 100%;
+  height: 500px; }
 
 .embed-wrapper-16x9 {
   padding-top: 56.25%; }
@@ -114,7 +125,9 @@ button {
   .layout-1col {
     grid-template-columns: repeat(1, 1fr); }
   .layout-2col, .layout-3col, .layout-4col {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .layout-root2col {
+    grid-template-columns: 0.414fr 1fr; } }
 
 @media screen and (min-width: 1024px) {
   .layout-2col {
@@ -213,11 +226,16 @@ button {
   max-width: 43.33333rem; }
 
 .items-count {
+  padding-top: 2.625rem;
+  padding-bottom: 2.625rem;
   background-color: #FFE000;
   color: #000; }
   @media screen and (min-width: 768px) {
     .items-count .feature-heading {
       margin-bottom: 0; } }
+
+.an-post-logo {
+  max-width: 200px; }
 
 footer {
   background-color: #BD001C; }

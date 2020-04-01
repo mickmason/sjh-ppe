@@ -16,11 +16,13 @@ $tablet: $med
 	[class*="layout"] 
 		display: grid
 		grid-template-rows: auto 
-		
+	
 	.layout-1col
 		grid-template-columns: repeat(1, 1fr)
 	.layout-2col, .layout-3col, .layout-4col
 		grid-template-columns: repeat(2, 1fr)
+	.layout-root2col
+		grid-template-columns: 0.414fr 1fr
 @media screen and (min-width: $large)
 	.layout-2col
 		grid-template-columns: repeat(2, 1fr)

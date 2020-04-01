@@ -38,7 +38,8 @@ button
 	
 .feature-heading
 	margin-top: 0
-
+img
+	width: 100%
 .btn
 	margin-top: $vertical-unit
 	padding: calc(#{$vertical-unit/2} - 2px) 1.5rem calc(#{$vertical-unit/2} + 2px) 1.5rem
@@ -66,6 +67,8 @@ button
 @media screen and (min-width: 1400px) 
 	html
 		font-size: 20px
+iframe
+	border: none
 [class*="embed-wrapper"]
 	position: relative 
 	iframe, embed, video
@@ -75,6 +78,11 @@ button
 		transform: translate(calc(-50%), -50%)
 		width: calc(100%)
 		height: 100%
+		border: none 
+.an-post-map-embed
+	iframe
+		width: 100%
+		height: 500px
 		
 .embed-wrapper-16x9
 		padding-top: (9/16*100%)
@@ -88,8 +96,6 @@ button
 
 .container
 	padding: $vertical-unit*3 0
-
-		
 .container-content
 	max-width: calc(#{$content-max-width} - (#{$gutter/2}))
 	margin-left: calc((100% - #{$content-max-width})/2)
@@ -148,11 +154,16 @@ button
 	&__leader
 		max-width: #{(780/18)}rem
 .items-count
+	padding-top: 		$vertical-unit*1.75
+	padding-bottom: $vertical-unit*1.75
 	background-color: $brand-secondary
 	color: $black
 	@media screen and (min-width: $tablet)
 		.feature-heading
 			margin-bottom: 0
 
+.an-post-logo
+	max-width: 200px
+	
 footer
 	background-color: $brand-red
