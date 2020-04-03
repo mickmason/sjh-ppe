@@ -6,7 +6,7 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,200;0,700;1,200;1,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="style.css" /> 
 </head>  
 <body> 
 	
@@ -18,6 +18,14 @@
 					<h1 class="hero__body__title feature-heading">Covid-19 PPE Nationwide Appeal</h1>
 					<p class="hero__body__sub-title">Helping us to help you</p>					
 					<a class="hero__cta btn" href="#how-to-help">Donate now</a> 
+					<p class="hero__cta arrow-btn arrow-btn--white">
+						<a href="#corporate-donations">
+							Corporate donations
+						</a>  		
+						<svg class="svg-icon">
+								<use xlink:href="./media/svg/icons/bc-svgs.svg#arrow"></use>
+						</svg>
+					</p>
 				</div>	
 			</div>
 			<!--<div class="column">-->
@@ -40,19 +48,135 @@
 			</div>
 		</div>
 	</section><!-- // Count -->
-	<section class="container">
+	
+	
+	<section class="container is-light-shade ppe-delivery" id="how-to-help">
+		<div class="container-content layout-1col">
+			<div class="column">
+				<h1 class="feature-heading">How to help...</h1>	
+			</div>
+		</div>
 		<div class="container-content layout-2col">
-				<div class="column is-vertical-centered">
+			<div class="column">
+				<h2 class="ppe-delivery__sub-head">
+					<!--<svg class="svg-icon">
+							<use xlink:href="./media/svg/icons/bc-svgs.svg#package"></use>
+					</svg>-->
+					Your package
+				</h2>
+				<p>Please make sure to package your PPE securely so that it reaches us safely and ready for use:</p>
+				<ul>
+					<li>We ask donors to break their items into no more than 30kg in weight.</li>
+					<li>Packages must be very well wrapped and suitable for postage.</li>
+				</ul>
+				<p>Visit <a href="https://anpost.ie">annpost.ie</a> for information about offices and packaging.</p>
+			</div>
+			<div class="column">
+				<h2 class="ppe-delivery__sub-head">
+					<!--<svg class="svg-icon"> 
+						<use xlink:href="./media/svg/icons/bc-svgs.svg#guarantee"></use>
+					</svg>-->
+					Your delivery
+				</h2>
+				<p>Items can be delivered to any of the <b>120 Án Post Depots</b> around the country. </p>
+				<p>Send your items to:</p>	
+				<p><b>
+					PPE Materials Appeal <br />
+					St James Hospital<br />
+					FREEPOST<br />
+					James Street<br />
+					Dublin 8<br />
+					D08 NHY1<br />
+					</b>
+				</p>
+				<p>View the map below for an Án Post drop-off location near you.</p>
+			</div>
+		</div>
+		<div class="container-content layout-1col">
+			<div class="column	an-post-map-embed">
+				<iframe src="https://www.google.com/maps/d/embed?mid=1qYhuNWxnw8VFDs5fAAdDalSq0kH-WTqk&hl=en" ></iframe>	
+			</div>
+		</div>
+		<div class="container-content layout-1col"> 
+			<div class="column">
+				<h2>Thank you Án Post</h2>
+				
+				<p>Your donation is made possible with the generous assistance of <b>Án Post</b>.</p>
+				<img class='an-post-logo' src="./media/an-post-logo.jpg" alt="An Post Ireland">
+			</div>
+		</div>
+	</section> 
+	<!-- Corporate donations -->
+	<section class="container ppe-corporate-donations has-secondary-background" id="corporate-donations">
+		<div class="container-content layout-1col">
+			<div class="column">
+				<h1 class="feature-heading">Corporate donations</h1>	
+			</div>
+		</div>
+		<div class="container-content layout-1col">
+			<div class="column">
+				<p>For corporate PPE donations please make contact with Vincent Callan, Director of Health Informatics, St. James's Hospital Dublin:</p>
+				<p><a href="mailto:Vcallan@stjames.ie">Vcallan@stjames.ie</a>.</p>
+				<p>Please add the hashtag <b>#ppe-corporate</b> in the email subject line.</p>
+			</div>
+		</div>
+	</section><!-- // Corporate donations -->  
+	<section class="container ppe-thank-you"> 
+		<div class="container-content layout-2col ppe-thank-you__intro">
+				<div class="column is-vertical-bottom">
 					<h1>Thank you</h1>
-					<p>First of all thank you for your offer of assistance. Everyone in the hospital is incredibly grateful for your contribution and it is making a huge difference in this battle we are in. See below for how to send items to us.
-</p>	
+					<p class="is-intro-text">Thank you for your offer of assistance. Everyone in the hospital is incredibly grateful for your contribution and it is making a huge difference in this battle we are in.</p> 
+					<p class="is-intro-text"><b><a href="#how-to-help">See below for how to send items to us</a></b>.</p>
+
 				</div>
+					
+					
+				
 				<div class="column">
 					<div class=" embed-wrapper-16x9">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/BzICva0g8TY?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>	
 				</div>
-				
+		</div>
+		<div class="container-content layout-1col ppe-thank-you__message">
+			<div class="column">
+					<hr />
+					<blockquote>
+						<svg class="svg-icon">
+							<use xlink:href="./media/svg/icons/bc-svgs.svg#quotes"></use>
+						</svg>
+						<p>Ceppie and I would like to thank everyone who helped us in this drive for PPE so far. We are truly honoured to witness this most most incredible outpouring of kindness and love for frontline workers in James&apos;s.</p> 
+						<p>From the <b>pharmacy on Thomas street</b> who started us on this journey. We thank you.</p>
+						<p>To <b>Sean</b> who helped us with the video of request, we thank you.</p>
+
+						<p>To the <b>Chinese Business Community</b> for their amazing donations, we thank you.</p>
+
+						<p>To <b>every hairdresser, beautician and nail salon</b> that has donated masks and gloves we thank you.</p>
+
+						<p>To the <b>schools and Creche&apos;s</b> who have searched out gloves from every lab, art room and nursery, we thank you.</p>
+						<p>To the <b>vets from all around the country</b> that have sent in gowns, we thank you.</p>
+
+						<p>To the <b>dentists and chiropodists</b> who have contributed gloves and masks, we thank you.</p>
+
+						<p>To the <b>restaurants and food industry</b> who have contributed gloves and disposable hats, we thank you.</p> 
+
+						<p>To <b>every private citizen who had a few masks or gloves at home</b> and who saw our needs as greater than there own, we thank you.</p>
+
+						<p>To the <b>business people who gave up the opportunity to sell their masks and gloves</b> and instead donated them to us, we thank you.</p> 
+
+						<p>To the <b>motorbikes who have organised into an army to collect donations</b>, we thank you.</p>
+						<cite>&mdash; <b>Dr. Ceppie Merry and Dr. Ann Marie McLaughlin, St. James&apos;s Hospital Dublin</b></cite>
+					</blockquote>
+					
+					
+					
+					<h2>A long way to go</h2>
+					
+					<p>But this battle is not yet won. Please see below how <a href="#how-to-help">individuals and small business</a> and <a href="#corporate-donations">corporate donors</a> can help.</p> 
+					<p>There is a long way to go.</p>
+					
+					
+			</div>
 		</div>
 		<!--<div class="container-content layout-1col am-cp-posts">
 			<div class="column">
@@ -88,54 +212,6 @@
 			
 		</div>-->
 	</section><!-- // Thank you -->  
-	
-	<section class="container is-light-shade" id="how-to-help">
-		<div class="container-content layout-1col">
-			<div class="column">
-				<h1 class="feature-heading">How to help...</h1>	
-			</div>
-		</div>
-		<div class="container-content layout-2col">
-			<div class="column">
-				<h2>Package</h2>
-				<p>Please make sure to package your PPE securely so that it reaches us safely and ready for use:</p>
-				<ul>
-					<li>We ask donors to break their items into no more than 30kg in weight.</li>
-					<li>Packages must be very well wrapped and suitable for postage.</li>
-				</ul>
-				<p>Visit <a href="https://anpost.ie">annpost.ie</a> for information about offices and packaging.</p>
-			</div>
-			<div class="column">
-				<h2>Your devlivery</h2>
-				<p>Items can be delivered to any of the <b>120 Án Post Depots</b> around the country. </p>
-				<p>Send your items to:</p>	
-				<p><b>
-					PPE Materials Appeal <br />
-					St James Hospital<br />
-					FREEPOST<br />
-					James Street<br />
-					Dublin 8<br />
-					D08 NHY1<br />
-					</b>
-				</p>
-				<p>View the map below for an Án Post drop-off location near you.</p>
-			</div>
-		</div>
-		<div class="container-content layout-1col">
-			<div class="column	an-post-map-embed">
-				<iframe src="https://www.google.com/maps/d/embed?mid=1qYhuNWxnw8VFDs5fAAdDalSq0kH-WTqk&hl=en" ></iframe>	
-			</div>
-		</div>
-		<div class="container-content layout-2col"> 
-			
-			<div class="column">
-				<h2>Thank you Án Post</h2>
-				
-				<p>Your donation is made possible with the generous assistance of <b>Án Post</b>.</p>
-				<img class='an-post-logo' src="./media/an-post-logo.jpg" alt="An Post Ireland">
-			</div>
-		</div>
-	</section>  
 	<footer class="container">
 		<div class="container-content"></div>
 	</footer>

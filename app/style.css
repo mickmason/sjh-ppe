@@ -3,7 +3,7 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 14px; }
+  font-size: 1	4px; }
 
 body {
   margin: 0;
@@ -31,6 +31,9 @@ p, ul {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
+.layout-1col p, .layout-1col ul, .layout-1col blockquote {
+  max-width: 40rem; }
+
 button {
   font-family: "Quattrocento Sans"; }
 
@@ -45,6 +48,9 @@ button {
   font-size: 6rem;
   font-weight: 300;
   line-height: 1; }
+
+.is-intro-text {
+  font-size: 1.1487rem; }
 
 .feature-heading {
   margin-top: 0; }
@@ -64,11 +70,33 @@ img {
   .btn:hover, .btn:active, .btn:focus {
     background-color: #ffe633;
     text-decoration: underline; }
-  .btn .btn__red {
+  .btn.btn--small {
+    padding: calc(0.5rem - 2px) 1.25rem calc(0.5rem + 2px) 1.25rem;
+    font-size: 1rem; }
+  .btn.btn--red {
     color: #fff;
     background-color: #BD001C; }
-    .btn .btn__red:hover, .btn .btn__red:active, .btn .btn__red:focus {
+    .btn.btn--red:hover, .btn.btn--red:active, .btn.btn--red:focus {
       background-color: #8a0014; }
+  .btn.btn--white {
+    color: #000;
+    background-color: #fff; }
+    .btn.btn--white:hover, .btn.btn--white:active, .btn.btn--white:focus {
+      background-color: #e6e6e6; }
+
+.arrow-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .arrow-btn a {
+    margin-right: 0.5rem;
+    text-decoration: none; }
+    .arrow-btn a:hover, .arrow-btn a:active, .arrow-btn a:focus {
+      text-decoration: underline; }
+  .arrow-btn.arrow-btn--white a {
+    color: #fff; }
+  .arrow-btn.arrow-btn--white .svg-icon {
+    fill: #fff; }
 
 @media screen and (min-width: 600px) {
   html {
@@ -103,10 +131,18 @@ iframe {
 .embed-wrapper-16x9 {
   padding-top: 56.25%; }
 
-.is-vertical-centered {
+[class*="is-vertical-"] {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; }
+
+.is-vertical-centered {
   justify-content: center; }
+
+.is-vertical-bottom {
+  justify-content: flex-end; }
+
+.has-secondary-background {
+  background-color: #FFE000; }
 
 /* Shades */
 .flexbox {
@@ -208,13 +244,50 @@ iframe {
       width: auto;
       min-width: 0; }
   .hero__cta {
-    font-size: 1.3195rem; }
+    font-size: 1.3195rem;
+    margin-bottom: 1.5rem; }
 
 @media screen and (max-width: 767px) {
   .hero {
     min-height: 100vh; }
     .hero__body {
       margin-bottom: 1.5rem; } }
+
+.ppe-thank-you__intro {
+  margin-bottom: 2.25rem; }
+  .ppe-thank-you__intro .column {
+    margin-bottom: 0; }
+
+.ppe-thank-you .is-intro-text:last-of-type {
+  margin-bottom: 0; }
+
+.ppe-thank-you hr {
+  margin-bottom: 2.25rem;
+  border-color: rgba(7, 55, 99, 0.8);
+  border-width: 2px; }
+
+.ppe-thank-you blockquote {
+  position: relative;
+  margin-left: 4rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-size: 1.1487rem;
+  line-height: 1.6; }
+  .ppe-thank-you blockquote .svg-icon {
+    position: absolute;
+    left: -3.5rem;
+    top: 0;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    padding: 0.5rem;
+    background-color: #FFE000; }
+
+.ppe-thank-you cite {
+  font-size: 1rem; }
+
+.ppe-delivery__sub-head {
+  display: flex;
+  align-items: center; }
 
 .am-cp-posts {
   margin-top: 3rem; }

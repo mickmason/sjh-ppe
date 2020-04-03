@@ -4899,8 +4899,19 @@
 	const embedwrappers = document.querySelectorAll(`[class*="embed-wrapper"]`);
 	for (let embedwrapper of embedwrappers) {
 		const embedable = embedwrapper.querySelector('iframe, video, embed');
+		/*if (!embedwrapper.classList.contains('.embed-wrapper-16x9')) {
+			console.log(embedable.getAttribute('height'));
+			embedwrapper.style.width = embedable.getAttribute('width');
+			embedwrapper.style.height = embedable.getAttribute('height');
+		}*/
+		console.log(embedwrapper.classList);
+		if (embedwrapper.classList.contains('an-post-map-embed')) {
+			console.log('Return');
+			return;
+		} 
 		embedable.removeAttribute('width');
 		embedable.removeAttribute('height');
+		
 		
 	}
 	

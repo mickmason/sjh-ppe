@@ -2,7 +2,7 @@
 *
 	box-sizing: border-box
 html
-	font-size: 14px
+	font-size: 1	4px
 body
 	margin: 0 
 	padding: 0
@@ -23,6 +23,11 @@ h3
 p, ul
 	margin-top: 		0
 	margin-bottom: $vertical-unit
+
+.layout-1col
+	p, ul, blockquote
+		max-width: 40rem
+
 button
 	font-family: $text-sans
 .svg-icon
@@ -35,7 +40,8 @@ button
 	font-size: 6rem
 	font-weight: 300
 	line-height: 1
-	
+.is-intro-text
+	font-size: $text-01
 .feature-heading
 	margin-top: 0
 img
@@ -52,12 +58,33 @@ img
 	&:hover, &:active, &:focus
 		background-color: lighten($brand-secondary, 10%)
 		text-decoration: underline
-	& &__red
+	&.btn--small
+		padding: calc(#{$vertical-unit/3} - 2px) 1.25rem calc(#{$vertical-unit/3} + 2px) 1.25rem
+		font-size: 1rem
+	&.btn--red
 		color: $white
 		background-color: $brand-red
 		&:hover, &:active, &:focus
 			background-color: darken($brand-red, 10%)
-
+	&.btn--white
+		color: $black
+		background-color: $white
+		&:hover, &:active, &:focus
+			background-color: darken($white, 10%)
+.arrow-btn
+	display: flex
+	justify-content: space-between
+	align-items: center
+	a
+		margin-right: $gutter/4
+		text-decoration: none
+		&:hover, &:active, &:focus
+			text-decoration: underline
+	&.arrow-btn--white
+		a
+			color: $white
+		.svg-icon 
+			fill: $white
 @media screen and (min-width: 600px) 
 	html
 		font-size: 16px
@@ -69,7 +96,7 @@ img
 		font-size: 20px
 iframe
 	border: none
-[class*="embed-wrapper"]
+[class*="embed-wrapper"] 
 	position: relative 
 	iframe, embed, video
 		position: absolute
@@ -86,11 +113,15 @@ iframe
 		
 .embed-wrapper-16x9
 		padding-top: (9/16*100%)
-.is-vertical-centered
+[class*="is-vertical-"]
 	display: flex
 	flex-direction: column
+.is-vertical-centered
 	justify-content: center
-
+.is-vertical-bottom
+	justify-content: flex-end
+.has-secondary-background
+	background-color: $brand-secondary
 @import 'partials/grid';
 @import 'partials/hero';
 
@@ -138,6 +169,7 @@ iframe
 			min-width: 0
 	&__cta
 		font-size: $text-02
+		margin-bottom: $vertical-unit
 		
 @media screen and (max-width: #{($med - 	1)})
 	.hero
@@ -145,6 +177,43 @@ iframe
 		
 		&__body
 			margin-bottom: $vertical-unit
+.ppe-thank-you
+	&__intro
+		margin-bottom: $vertical-unit*1.5
+		.column
+			margin-bottom: 0
+	.is-intro-text
+		&:last-of-type
+			margin-bottom: 0
+	hr 
+		margin-bottom: $vertical-unit*1.5
+		border-color: rgba($brand-primary, 0.8)
+		border-width: 2px
+	blockquote
+		position: relative
+		margin-left: $gutter*2
+		margin-bottom: $vertical-unit
+		font-style: italic
+		font-size: $text-01
+		line-height: 1.6
+		.svg-icon
+			position: absolute
+			left: -$gutter*1.75
+			//top: #{(3/14)}rem
+			top: 0
+			max-width: 	2.5rem
+			max-height: 2.5rem
+			padding: $gutter/4
+			background-color: $brand-secondary
+	cite
+		font-size: $text-00
+
+.ppe-delivery
+	&__sub-head
+		display: flex
+		align-items: center
+		
+	
 .am-cp-posts
 	margin-top: $vertical-unit*2
 	@media screen and (min-width: $tablet)
